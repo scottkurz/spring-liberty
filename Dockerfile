@@ -1,5 +1,5 @@
 # Stage and thin the application 
-FROM icr.io/appcafe/open-liberty:full-java21-openj9-ubi-minimal as staging
+FROM icr.io/appcafe/open-liberty:full-java17-openj9-ubi-minimal as staging
 
 ARG APPNAME=spring-liberty-0.0.1-SNAPSHOT.war
 COPY --chown=1001:0 target/$APPNAME \
@@ -10,7 +10,7 @@ RUN springBootUtility thin \
  --targetThinAppPath=/staging/thin-$APPNAME \
  --targetLibCachePath=/staging/lib.index.cache
 
-FROM icr.io/appcafe/open-liberty:kernel-slim-java21-openj9-ubi-minimal
+FROM icr.io/appcafe/open-liberty:kernel-slim-java17-openj9-ubi-minimal
 
 ARG APPNAME=spring-liberty-0.0.1-SNAPSHOT.war
 ARG VERSION=1.0
