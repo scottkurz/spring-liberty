@@ -44,11 +44,11 @@
 			<plugin>
 				<groupId>io.openliberty.tools</groupId>
 				<artifactId>liberty-maven-plugin</artifactId>
-                <version>3.10</version>
-                <configuration>
-                    <appsDirectory>apps</appsDirectory>
-                    <deployPackages>spring-boot-project</deployPackages>
-                </configuration>
+				<version>3.11.2</version>
+				<configuration>
+					<appsDirectory>apps</appsDirectory>
+					<deployPackages>spring-boot-project</deployPackages>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

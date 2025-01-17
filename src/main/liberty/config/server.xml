@@ -19,8 +19,7 @@
     <ssl id="defaultSSLConfig" trustDefaultCerts="true" />
 
     <springBootApplication id="spring-liberty" location="thin-spring-liberty-0.0.1-SNAPSHOT.war" name="spring-liberty">
-        <applicationArgument>--server.servlet.context-path=/testpath</applicationArgument>
-        <applicationArgument>--myarg=myval</applicationArgument>
+        <applicationArgument>--logging.level.org.springframework.web=debug</applicationArgument>
     </springBootApplication>
 
 </server>
